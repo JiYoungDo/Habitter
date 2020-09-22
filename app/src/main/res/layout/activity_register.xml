@@ -12,7 +12,7 @@
         android:id="@+id/register_tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입"
+        android:text="@string/register_title"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/colorDarkGray"
@@ -22,68 +22,119 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="25dp"/>
 
-    <Button
-        android:id="@+id/register_tv_btn_explanation"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:text="사용 방법"
-        android:background="@drawable/round_background"
-        android:backgroundTint="@color/colorDarkGray"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/a_lignt_font"
-        android:gravity="center"
-        android:textSize="26sp"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginBottom="45dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/register_tv_btn_start_with_analysis"/>
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/register_tv_title"
+        app:layout_constraintBottom_toTopOf="@id/register_iv_bottom_flower"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
-    <Button
-        android:id="@+id/register_tv_btn_start_with_analysis"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:text="분석하고 시작"
-        android:background="@drawable/round_background"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/a_lignt_font"
-        android:gravity="center"
-        android:textSize="26sp"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/register_tv_btn_start_without_analysis"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:text="분석 없이 시작"
-        android:background="@drawable/round_background"
-        android:backgroundTint="@color/colorMiddleGray"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/a_lignt_font"
-        android:gravity="center"
-        android:textSize="26sp"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginTop="45dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_tv_btn_start_with_analysis"/>
+            <EditText
+                android:id="@+id/register_et_nick_name"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:layout_marginRight="20dp"
+                android:textColorHint="@color/colorDarkGray"
+                android:textColor="@color/colorDarkGray"
+                android:hint="@string/register_nick_name"
+                android:fontFamily="@font/a_lignt_font"/>
+
+            <TextView
+                android:id="@+id/register_tv_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_explain"
+                android:textSize="14sp"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/register_et_nick_name"
+                app:layout_constraintLeft_toLeftOf="@id/register_et_nick_name"/>
+
+            <Button
+                android:id="@+id/register_tv_btn_start_with_analysis"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/register_with_analysis"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_marginBottom="45dp"
+                app:layout_constraintTop_toBottomOf="@id/register_tv_explain"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="60dp"/>
+
+            <Button
+                android:id="@+id/register_tv_btn_start_without_analysis"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/register_without_analysis"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/a_lignt_font"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/register_tv_btn_start_with_analysis"
+                android:layout_marginTop="45dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <Button
+                android:id="@+id/register_tv_btn_how_to_use"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/how_to_use"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorMiddleGray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/a_lignt_font"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_marginTop="45dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_tv_btn_start_without_analysis"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/register_tv_btn_how_to_use"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
 
 
     <ImageView
+        android:id="@+id/register_iv_bottom_flower"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"

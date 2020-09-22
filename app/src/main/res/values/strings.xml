@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Habitter</string>
     <string name="title">해비터</string>
+    <string name="register_nick_name">닉네임을 입력해주세요.</string>
+    <string name="register_explain">해당 닉네임으로 가입 후 자동 로그인 됩니다.</string>
+    <string name="register_with_analysis">분석하고 시작</string>
+    <string name="register_without_analysis">분석 없이 시작</string>
+    <string name="how_to_use">사용 방법</string>
+    <string name="register_title">회원가입</string>
 </resources>
