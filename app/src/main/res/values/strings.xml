@@ -7,4 +7,7 @@
     <string name="register_without_analysis">분석 없이 시작</string>
     <string name="how_to_use">사용 방법</string>
     <string name="register_title">회원가입</string>
+    <string name="clock">오늘</string>
+    <string name="calendar">달력</string>
+    <string name="setting">설정</string>
 </resources>

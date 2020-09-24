@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_clock_item"
+        android:icon="@drawable/c_clock_selector"
+        android:enabled="true"
+        android:title="@string/clock"/>
+    <item
+        android:id="@+id/menu_calendar_item"
+        android:icon="@drawable/c_calendar_selector"
+        android:enabled="true"
+        android:title="@string/calendar"/>
+    <item
+        android:id="@+id/menu_setting_item"
+        android:icon="@drawable/c_setting_selector"
+        android:enabled="true"
+        android:checked="true"
+        android:title="@string/setting"/>
+</menu>

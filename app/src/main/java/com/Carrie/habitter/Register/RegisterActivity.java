@@ -2,10 +2,14 @@ package com.Carrie.habitter.Register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.Carrie.habitter.Analysis.AnalysisActivity;
 import com.Carrie.habitter.HabitLog.HabitLogActivity;
@@ -29,6 +33,8 @@ public class RegisterActivity extends AppCompatActivity {
         start_not_analysis = findViewById(R.id.register_tv_btn_start_without_analysis);
 
         // 팝업 창 띄우기
+        PopupInfo popupInfo = new PopupInfo(this);
+        popupInfo.callFunction();
 
         how_use.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,5 +62,33 @@ public class RegisterActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public class PopupInfo {
+        private Context context;
+
+        public PopupInfo(Context context) {
+            this.context = context;
+        }
+
+        //호출할 다이얼로그 함수
+        public void callFunction()
+        {
+            final Dialog dig = new Dialog(context);
+            dig.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+            dig.setContentView(R.layout.popup_info);
+            dig.show();
+
+            Button go_info_btn = dig.findViewById(R.id.pop_up_info_btn_go_to_info);
+            go_info_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dig.dismiss();
+                }
+            });
+
+        }
+
     }
 }

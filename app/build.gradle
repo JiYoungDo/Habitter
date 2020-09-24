@@ -10,7 +10,8 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -37,4 +38,7 @@ dependencies {
 
     // BoomMenu
     implementation 'com.nightonke:boommenu:2.1.1'
+
+    // bottomNavigationView
+    implementation 'com.android.support:design:29.0.0'
 }
