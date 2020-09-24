@@ -73,8 +73,12 @@ public class Habit_Item_Adapter extends  RecyclerView.Adapter<Habit_Item_Adapter
     @Override
     public void onBindViewHolder(@NonNull Habit_Item_Adapter.Habit_Item_ViewHolder holder, int position) {
 
+        Drawable drawable = context.getResources().getDrawable(R.drawable.round_background);
+
         holder.habit_title.setText(mList.get(position).getHabit_title());
+
         holder.habit_title.setBackgroundColor(mList.get(position).getHabit_color());
+//        holder.habit_title.setBackgroundDrawable(drawable);
     }
 
     @Override

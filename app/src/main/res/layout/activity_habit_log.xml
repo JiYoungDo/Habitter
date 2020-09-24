@@ -70,8 +70,8 @@
         app:layout_constraintTop_toBottomOf="@id/habit_log_tv_btn_add_habit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/habit_log_activity_bnv"/>
 
 

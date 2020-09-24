@@ -41,4 +41,7 @@ dependencies {
 
     // bottomNavigationView
     implementation 'com.android.support:design:29.0.0'
+
+    // calendarView
+    implementation 'com.github.prolificinteractive:material-calendarview:1.6.0'
 }
