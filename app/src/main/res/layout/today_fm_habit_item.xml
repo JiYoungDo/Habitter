@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/today_fm_habit_item"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/round_background"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="두피마사지"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:fontFamily="@font/a_lignt_font"
+  />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

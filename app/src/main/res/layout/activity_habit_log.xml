@@ -64,7 +64,7 @@
         android:layout_marginRight="10dp"/>
 
     <FrameLayout
-        android:id="@+id/activity_fl"
+        android:id="@+id/habit_log_activity_fl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/habit_log_tv_btn_add_habit"
@@ -72,11 +72,11 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/activity_bnv"/>
+        app:layout_constraintBottom_toTopOf="@+id/habit_log_activity_bnv"/>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/activity_bnv"
+        android:id="@+id/habit_log_activity_bnv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foregroundGravity="center"

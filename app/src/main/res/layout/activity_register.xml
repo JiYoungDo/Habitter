@@ -63,7 +63,7 @@
 
             <Button
                 android:id="@+id/register_tv_btn_start_with_analysis"
-                android:layout_width="200dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="@string/register_with_analysis"
@@ -82,7 +82,7 @@
 
             <Button
                 android:id="@+id/register_tv_btn_start_without_analysis"
-                android:layout_width="200dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="@string/register_without_analysis"
@@ -103,7 +103,7 @@
 
             <Button
                 android:id="@+id/register_tv_btn_how_to_use"
-                android:layout_width="200dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="@string/how_to_use"
