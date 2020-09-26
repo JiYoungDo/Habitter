@@ -24,7 +24,6 @@ public class HabitLogActivity extends AppCompatActivity {
     TextView date;
 
     BottomNavigationView bottomNavigationView;
-    FrameLayout fl;
 
     Setting_Fragment setting_fragment;
     Calendar_Fragment calendar_fragment;
