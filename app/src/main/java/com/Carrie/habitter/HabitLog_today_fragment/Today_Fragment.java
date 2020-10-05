@@ -1,12 +1,15 @@
 package com.Carrie.habitter.HabitLog_today_fragment;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,6 +32,9 @@ public class Today_Fragment extends Fragment {
     Habit_Item_Adapter habit_item_adapter;
     ArrayList mArrayList;
 
+    TextView add_habit;
+    TextView delete_habit;
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -46,6 +52,38 @@ public class Today_Fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.today_fragment,container,false);
 
+        // 습관 추가 버튼
+        add_habit = viewGroup.findViewById(R.id.today_fm_tv_btn_add_habit);
+        add_habit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Add_habit_Dialog add_habit_dialog = new Add_habit_Dialog(mainActivity);
+                add_habit_dialog.show();
+            }
+
+            // 사용자가 팝업 창을 통해 입력한 습관 이름.
+            final SharedPreferences auto = getContext().getSharedPreferences("nickStr", Activity.MODE_PRIVATE);
+            String user_add_habit_now = auto.getString("user_add_habit","null");
+            // 위  str 값을 db 에 저장한다.
+
+        });
+
+
+
+
+
+        // 습관 삭제 버튼
+        delete_habit = viewGroup.findViewById(R.id.today_fm_tv_btn_remove_habit);
+        delete_habit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Delete_habit_Dialog delete_habit_dialog = new Delete_habit_Dialog(mainActivity);
+                delete_habit_dialog.show();
+            }
+        });
+
+
+        // 습관 리스트 리사이클러 뷰 연결
         recyclerView = viewGroup.findViewById(R.id.today_fm_habit_name_rv);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -57,16 +95,9 @@ public class Today_Fragment extends Fragment {
         recyclerView.addItemDecoration(dividerItemDecoration);
 
         // dummy 넣어서 보이게 해보기.
-        int color_1 = getResources().getColor(R.color.colorAccent);
-        int color_2 = getResources().getColor(R.color.colorPrimaryDark);
-        int color_3 = getResources().getColor(R.color.colorHotCoral);
-//        Drawable drawable_1 = getResources().getDrawable(R.drawable.gra_blue_1);
-//        Drawable drawable_2 = getResources().getDrawable(R.drawable.gra_yellow_1);
-//        Drawable drawable_3 = getResources().getDrawable(R.drawable.gra_pink_3);
-
-        Habit_Item habit_item = new Habit_Item("독서하기",color_1);
-        Habit_Item habit_item2 = new Habit_Item("운동장 10바퀴!",color_2);
-        Habit_Item habit_item3 = new Habit_Item("8:30 기상!",color_3);
+        Habit_Item habit_item = new Habit_Item("독서하기");
+        Habit_Item habit_item2 = new Habit_Item("운동장 10바퀴!");
+        Habit_Item habit_item3 = new Habit_Item("8:30 기상!");
 
         mArrayList.add(habit_item);
         mArrayList.add(habit_item2);
@@ -77,6 +108,7 @@ public class Today_Fragment extends Fragment {
         habit_item_adapter.setOnItemClickListener(new Habit_Item_Adapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int pos) {
+                // 세부 화면으로 넘어가기.
                 Toast.makeText(getContext(),"클릭!",Toast.LENGTH_LONG).show();
             }
         });

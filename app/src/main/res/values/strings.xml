@@ -17,4 +17,10 @@
     <string name="confirm_change_nickname">변경완료</string>
     <string name="frequent_question">자주 묻는 질문</string>
     <string name="delete_all">데이터 모두 삭제</string>
+    <string name="add_habit_dialog_title">습관 더하기</string>
+    <string name="add_habit_dialog_et_hint">이곳에 적어주세요</string>
+    <string name="confirm">확인</string>
+    <string name="cancel">취소</string>
+    <string name="delete_habit_dialog_title">습관 빼기</string>
+    <string name="delete_habit_dialog_contents">삭제 하고 싶은 습관을 \n손가락으로 길게 눌러주세요.</string>
 </resources>

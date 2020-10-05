@@ -4,11 +4,11 @@ import android.graphics.drawable.Drawable;
 
 public class Habit_Item {
     private String habit_title;
-    private int habit_color;
+    // private int habit_color;
 
-    public Habit_Item(String habit_title, int habit_color) {
+    public Habit_Item(String habit_title) {
         this.habit_title = habit_title;
-        this.habit_color = habit_color;
+        // this.habit_color = habit_color;
     }
 
     public String getHabit_title() {
@@ -19,11 +19,11 @@ public class Habit_Item {
         this.habit_title = habit_title;
     }
 
-    public int getHabit_color() {
-        return habit_color;
-    }
-
-    public void setHabit_color(int habit_color) {
-        this.habit_color = habit_color;
-    }
+//    public int getHabit_color() {
+//        return habit_color;
+//    }
+//
+//    public void setHabit_color(int habit_color) {
+//        this.habit_color = habit_color;
+//    }
 }

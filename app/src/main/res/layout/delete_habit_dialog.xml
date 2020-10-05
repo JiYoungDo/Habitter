@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/round_background"
+    android:layout_gravity="right"
+    android:layout_width="250dp"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/delete_habit_dialog_tv_title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_background"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:drawableTint="@color/colorDarkGray"
+        android:drawableLeft="@drawable/ic_delete"
+        android:paddingLeft="30dp"
+        android:drawablePadding="-30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="@string/delete_habit_dialog_title"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="16sp"
+        android:fontFamily="@font/a_lignt_font"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/delete_habit_dialog_tv_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintTop_toBottomOf="@id/delete_habit_dialog_tv_title"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/a_lignt_font"
+        android:text="@string/delete_habit_dialog_contents"/>
+
+    <TextView
+        android:id="@+id/delete_habit_dialog_tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        app:layout_constraintTop_toBottomOf="@id/delete_habit_dialog_tv_contents"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

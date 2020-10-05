@@ -40,7 +40,6 @@ public class HabitLogActivity extends AppCompatActivity {
         nick_name = findViewById(R.id.habit_log_tv_nickname_title);
         date = findViewById(R.id.habit_log_tv_date);
         bottomNavigationView  = findViewById(R.id.habit_log_activity_bnv);
-//        fl = findViewById(R.id.habit_log_activity_fl);
         bottomNavigationView.setItemIconTintList(null);
 
         setting_fragment = new Setting_Fragment();

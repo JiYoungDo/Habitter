@@ -77,7 +77,7 @@ public class Habit_Item_Adapter extends  RecyclerView.Adapter<Habit_Item_Adapter
 
         holder.habit_title.setText(mList.get(position).getHabit_title());
 
-        holder.habit_title.setBackgroundColor(mList.get(position).getHabit_color());
+//        holder.habit_title.setBackgroundColor(mList.get(position).getHabit_color());
 //        holder.habit_title.setBackgroundDrawable(drawable);
     }
 
