@@ -1,6 +1,7 @@
 package com.Carrie.habitter.HabitLog_today_fragment;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +60,10 @@ public class Today_Fragment extends Fragment {
         int color_1 = getResources().getColor(R.color.colorAccent);
         int color_2 = getResources().getColor(R.color.colorPrimaryDark);
         int color_3 = getResources().getColor(R.color.colorHotCoral);
+//        Drawable drawable_1 = getResources().getDrawable(R.drawable.gra_blue_1);
+//        Drawable drawable_2 = getResources().getDrawable(R.drawable.gra_yellow_1);
+//        Drawable drawable_3 = getResources().getDrawable(R.drawable.gra_pink_3);
+
         Habit_Item habit_item = new Habit_Item("독서하기",color_1);
         Habit_Item habit_item2 = new Habit_Item("운동장 10바퀴!",color_2);
         Habit_Item habit_item3 = new Habit_Item("8:30 기상!",color_3);

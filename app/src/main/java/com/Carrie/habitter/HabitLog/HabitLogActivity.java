@@ -3,6 +3,9 @@ package com.Carrie.habitter.HabitLog;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,6 +49,12 @@ public class HabitLogActivity extends AppCompatActivity {
 
 
         // nick_name 을 가져온 후 "의 하루"를 붙여 준다.
+        SharedPreferences auto = getSharedPreferences("nickStr", Activity.MODE_PRIVATE);
+
+        String nick = auto.getString("inputNickname",null);
+        nick_name.setText(nick+"의 오늘,");
+
+
 
         // time 텍스트 날짜 정보 가져와서 세팅
         long now = System.currentTimeMillis();
@@ -67,17 +76,25 @@ public class HabitLogActivity extends AppCompatActivity {
                     case R.id.menu_clock_item: {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.habit_log_activity_fl, today_fragment).commitAllowingStateLoss();
-
+                        int dark_gray_color = getResources().getColor(R.color.colorDarkGray);
+                        nick_name.setTextColor(dark_gray_color);
+                        date.setTextColor(dark_gray_color);
                         return true;
                     }
                     case R.id.menu_calendar_item: {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.habit_log_activity_fl, calendar_fragment).commitAllowingStateLoss();
+                        int white_color = getResources().getColor(R.color.colorWhite);
+                        nick_name.setTextColor(white_color);
+                        date.setTextColor(white_color);
                         return true;
                     }
                     case R.id.menu_setting_item: {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.habit_log_activity_fl, setting_fragment).commitAllowingStateLoss();
+                        int white_color = getResources().getColor(R.color.colorWhite);
+                        nick_name.setTextColor(white_color);
+                        date.setTextColor(white_color);
                         return true;
                     }
                     default:

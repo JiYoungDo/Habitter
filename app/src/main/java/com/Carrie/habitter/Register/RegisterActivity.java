@@ -2,15 +2,16 @@ package com.Carrie.habitter.Register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.Carrie.habitter.Analysis.AnalysisActivity;
@@ -25,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button start_not_analysis;
 
     EditText user_nick_name;
-
+    String shared_nick_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,20 @@ public class RegisterActivity extends AppCompatActivity {
         PopupInfo popupInfo = new PopupInfo(this);
         popupInfo.callFunction();
 
+        final SharedPreferences auto = getSharedPreferences("nickStr", Activity.MODE_PRIVATE);
+        shared_nick_name = auto.getString("inputNickname",null);
 
+        // auto 라는 sharedPreference 에 inputNickname 이라는 키값의 value 에 저장된 값이 있으면, 자동로그인 처리!
+        // 화면은 일단, HabitLogActivity로 넘긴다. ( 분석 없이 시작 화면 )
+        if(shared_nick_name != null)
+        {
+            Toast.makeText(RegisterActivity.this, shared_nick_name+"님 자동로그인 입니다.",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(RegisterActivity.this, HabitLogActivity.class );
+            startActivity(intent);
+            finish();
+        }
+
+        // 사용 방법 버튼
         how_use.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        // 분석 후 사용 버튼
         start_with_analysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,24 +73,31 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "닉네임을 입력해 주세요.",Toast.LENGTH_LONG).show();
                 } else
                 {
+                    // 닉네임 정보 저장 + intent 로 보내기
                     Intent intent = new Intent(RegisterActivity.this, AnalysisActivity.class);
                     startActivity(intent);
-                    // 닉네임 정보 DB 저장
+                    SharedPreferences.Editor editor = auto.edit();
+                    editor.putString("inputNickname",user_nick_name.getText().toString());
+                    editor.commit();
                     finish();
                 }
 
             }
         });
 
+        // 분석 없이 사용 버튼
         start_not_analysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(user_nick_name.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "닉네임을 입력해 주세요.",Toast.LENGTH_LONG).show();
                 }else {
+                    // 닉네임 정보 저장 + intent 로 보내기
                     Intent intent = new Intent(RegisterActivity.this, HabitLogActivity.class);
                     startActivity(intent);
-                    // 닉네임 정보 DB 저장
+                    SharedPreferences.Editor editor = auto.edit();
+                    editor.putString("inputNickname",user_nick_name.getText().toString());
+                    editor.commit();
                     finish();
                 }
 

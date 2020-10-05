@@ -1,5 +1,7 @@
 package com.Carrie.habitter.HabitLog_today_fragment;
 
+import android.graphics.drawable.Drawable;
+
 public class Habit_Item {
     private String habit_title;
     private int habit_color;

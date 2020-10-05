@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Habitter</string>
+    <string name="app_name">해비터</string>
     <string name="title">해비터</string>
     <string name="register_nick_name">닉네임을 입력해주세요.</string>
     <string name="register_explain">해당 닉네임으로 가입 후 자동 로그인 됩니다.</string>
@@ -10,6 +10,11 @@
     <string name="clock">오늘</string>
     <string name="calendar">달력</string>
     <string name="setting">설정</string>
-    <string name="setting_with">\"설정\"</string>
-    <string name="calendar_with">\"전체 달력\"</string>
+    <string name="setting_with">설정</string>
+    <string name="calendar_with">전체 달력</string>
+    <string name="change_nickname">닉네임 변경하기</string>
+    <string name="enter_change_nickname">닉네임을 입력해주세요.</string>
+    <string name="confirm_change_nickname">변경완료</string>
+    <string name="frequent_question">자주 묻는 질문</string>
+    <string name="delete_all">데이터 모두 삭제</string>
 </resources>
