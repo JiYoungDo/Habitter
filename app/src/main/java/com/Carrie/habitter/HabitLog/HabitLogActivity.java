@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,9 +15,11 @@ import android.widget.TextView;
 
 import com.Carrie.habitter.HabitLog_calendar_fragment.Calendar_Fragment;
 import com.Carrie.habitter.HabitLog_setting_fragment.Setting_Fragment;
+import com.Carrie.habitter.HabitLog_today_detail_habit_fragment.Detail_habit_Fragment;
 import com.Carrie.habitter.HabitLog_today_fragment.Today_Fragment;
 import com.Carrie.habitter.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,10 +30,12 @@ public class HabitLogActivity extends AppCompatActivity {
     TextView date;
 
     BottomNavigationView bottomNavigationView;
+    FloatingActionButton fab;
 
     Setting_Fragment setting_fragment;
     Calendar_Fragment calendar_fragment;
     Today_Fragment today_fragment;
+    Detail_habit_Fragment detail_habit_fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,17 @@ public class HabitLogActivity extends AppCompatActivity {
         setting_fragment = new Setting_Fragment();
         calendar_fragment = new Calendar_Fragment();
         today_fragment = new Today_Fragment();
+        detail_habit_fragment = new Detail_habit_Fragment();
+
+        fab = findViewById(R.id.habit_log_activity_fab);
+        fab.setBackgroundColor(Color.TRANSPARENT);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 분석하기 화면으로 넘어가기.
+            }
+        });
 
 
         // nick_name 을 가져온 후 "의 하루"를 붙여 준다.
@@ -101,6 +117,21 @@ public class HabitLogActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void onChangeFragment(int index)
+    {
+        if(index == 1)
+        {
+            // 1 번일 때는 today
+            getSupportFragmentManager().beginTransaction().replace(R.id.habit_log_activity_fl,today_fragment).commitAllowingStateLoss();
+        }
+
+        if(index == 2)
+        {
+            // 1 번일 때는 today
+            getSupportFragmentManager().beginTransaction().replace(R.id.habit_log_activity_fl,detail_habit_fragment).commitAllowingStateLoss();
+        }
 
 
     }

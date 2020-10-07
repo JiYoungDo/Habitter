@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,20 +16,29 @@ import java.util.ArrayList;
 
 public class Habit_Item_Adapter extends  RecyclerView.Adapter<Habit_Item_Adapter.Habit_Item_ViewHolder>{
 
-    private ArrayList<Habit_Item> mList;
+    private ArrayList<String> mList;
     Context context;
 
     // 리스너 인터페이스 정의하기
     public interface OnItemClickListener
-    {
-        void onItemClick(View v,int pos);
-    }
+    { void onItemClick(View v,int pos);}
+
+    public interface OnItemLongClickListener
+    {void onItemLongClick(View v,int pos);}
 
     // 전달된 객체 저장할 변수
     private Habit_Item_Adapter.OnItemClickListener mListener = null;
+    private Habit_Item_Adapter.OnItemLongClickListener mListener2 = null;
+
+
+
     // 리스너 객체 전달 메서드
     public void setOnItemClickListener(OnItemClickListener listener)
     { this.mListener = listener; }
+
+    public void setOnItemLongClickListener(OnItemLongClickListener listener)
+    {this.mListener2 = listener;}
+
 
 
     public class Habit_Item_ViewHolder extends  RecyclerView.ViewHolder
@@ -53,10 +61,22 @@ public class Habit_Item_Adapter extends  RecyclerView.Adapter<Habit_Item_Adapter
                     }
                 }
             });
+
+            view.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    int pos = getAdapterPosition();
+                    if(pos != RecyclerView.NO_POSITION)
+                    {
+                        mListener2.onItemLongClick(v,pos);
+                    }
+                    return false;
+                }
+            });
         }
     }
 
-    public Habit_Item_Adapter(ArrayList<Habit_Item> mList) {
+    public Habit_Item_Adapter(ArrayList<String> mList) {
         this.mList = mList;
     }
 
@@ -75,7 +95,7 @@ public class Habit_Item_Adapter extends  RecyclerView.Adapter<Habit_Item_Adapter
 
         Drawable drawable = context.getResources().getDrawable(R.drawable.round_background);
 
-        holder.habit_title.setText(mList.get(position).getHabit_title());
+        holder.habit_title.setText(mList.get(position));
 
 //        holder.habit_title.setBackgroundColor(mList.get(position).getHabit_color());
 //        holder.habit_title.setBackgroundDrawable(drawable);

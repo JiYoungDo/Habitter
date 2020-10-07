@@ -61,5 +61,23 @@
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/habit_log_activity_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="90dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        app:fabSize="normal"
+        android:layout_height="wrap_content"
+        app:maxImageSize="62dp"
+        app:elevation="2dp"
+        android:elevation="2dp"
+        android:src="@drawable/fab_icon"
+        android:clickable="true"
+        app:borderWidth="20dp"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

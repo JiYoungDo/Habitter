@@ -23,4 +23,5 @@
     <string name="cancel">취소</string>
     <string name="delete_habit_dialog_title">습관 빼기</string>
     <string name="delete_habit_dialog_contents">삭제 하고 싶은 습관을 \n손가락으로 길게 눌러주세요.</string>
+    <string name="addnewalarm">새 알람 추가</string>
 </resources>
