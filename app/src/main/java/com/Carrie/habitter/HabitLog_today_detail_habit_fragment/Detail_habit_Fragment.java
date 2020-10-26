@@ -30,6 +30,7 @@ import com.Carrie.habitter.R;
 import com.Carrie.habitter.Splash.SplashActivity;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
 import java.util.ArrayList;
 
@@ -60,9 +61,10 @@ public class Detail_habit_Fragment extends Fragment{
         calendarView.setSelectionMode(MaterialCalendarView.SELECTION_MODE_MULTIPLE);
 
         // 안 먹히는 중
-        calendarView.setDateSelected(CalendarDay.from(2020,10,5),true);
-        calendarView.setDateSelected(CalendarDay.from(2020,10,6),true);
+        calendarView.setDateSelected(CalendarDay.from(2020,10,12),true);
+        calendarView.setDateSelected(CalendarDay.from(2020,10,13),true);
 
+        CheckCalendar(calendarView);
 
         close_btn = viewGroup.findViewById(R.id.detail_habit_fm_btn_close);
         close_btn.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +78,12 @@ public class Detail_habit_Fragment extends Fragment{
     }
 
 
+    public void CheckCalendar(MaterialCalendarView materialCalendarView)
+    {
+        materialCalendarView.setDateSelected(CalendarDay.from(2020,10,12),true);
+        materialCalendarView.setDateSelected(CalendarDay.from(2020,10,13),true);
+
+    }
 
 
 }

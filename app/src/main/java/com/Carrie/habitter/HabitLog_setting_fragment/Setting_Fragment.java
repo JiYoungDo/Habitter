@@ -81,7 +81,7 @@ public class Setting_Fragment extends Fragment{
                                     // sharedpreference 값 닉네임 변경
                                     SharedPreferences auto = getActivity().getSharedPreferences("nickStr", Activity.MODE_PRIVATE);
                                     SharedPreferences.Editor editor = auto.edit();
-                                    editor.clear();
+                                    editor.remove("inputNickname");
                                     editor.putString("inputNickname",user_change_nickname.getText().toString());
                                     editor.commit();
                                     Intent intent = new Intent(mainActivity, HabitLogActivity.class);

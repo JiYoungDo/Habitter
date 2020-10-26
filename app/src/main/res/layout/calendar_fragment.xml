@@ -29,8 +29,9 @@
        android:id="@+id/habit_log_calendar_fm_calendar_view"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:background="@color/colorPrimaryDark"
+       android:background="@color/colorMiddleGray"
        app:layout_constraintTop_toTopOf="parent"
+       android:layout_marginTop="20dp"
        app:mcv_headerTextAppearance="@color/colorBlack"
        app:layout_constraintBottom_toBottomOf="parent"/>
 
