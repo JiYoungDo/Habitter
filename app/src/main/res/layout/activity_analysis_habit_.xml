@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Analysis_habit.Analysis_habit_Activity">
+
+    <ImageView
+        android:id="@+id/analysis_habit_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/ic_arrow_back"
+        android:layout_marginLeft="20dp" />
+    
+    
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/analysis_habit_btn_back"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/analysis_habit_iv_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/img_finger_one"
+                android:layout_marginLeft="20sp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/analysis_habit_tv_1"
+                app:layout_constraintTop_toTopOf="@id/analysis_habit_iv_1"
+                app:layout_constraintBottom_toBottomOf="@id/analysis_habit_iv_1"
+                app:layout_constraintLeft_toRightOf="@id/analysis_habit_iv_1"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/analysis_habit_1"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/analysis_habit_et_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_iv_1"
+                android:hint="@string/analysis_habit_1_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:paddingLeft="15dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <ImageView
+                android:id="@+id/analysis_habit_iv_2"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_1"
+                app:layout_constraintLeft_toLeftOf="@id/analysis_habit_iv_1"
+                android:src="@drawable/image_finger_two"
+                android:layout_marginTop="30dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/analysis_habit_tv_2"
+                app:layout_constraintTop_toTopOf="@id/analysis_habit_iv_2"
+                app:layout_constraintBottom_toBottomOf="@id/analysis_habit_iv_2"
+                app:layout_constraintLeft_toRightOf="@id/analysis_habit_iv_2"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/analysis_habit_2"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/analysis_habit_tv_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/analysis_habit_2_1"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_tv_2"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <EditText
+                android:id="@+id/analysis_habit_et_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_tv_2_1"
+                android:hint="@string/analysis_habit_2_1_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"/>
+
+            <EditText
+                android:id="@+id/analysis_habit_et_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_1"
+                android:hint="@string/analysis_habit_2_2_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <EditText
+                android:id="@+id/analysis_habit_et_2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_2"
+                android:hint="@string/analysis_habit_2_3_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <EditText
+                android:id="@+id/analysis_habit_et_2_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_3"
+                android:hint="@string/analysis_habit_2_4_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <EditText
+                android:id="@+id/analysis_habit_et_2_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_4"
+                android:hint="@string/analysis_habit_2_5_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <EditText
+                android:id="@+id/analysis_habit_et_2_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_5"
+                android:hint="@string/analysis_habit_2_6_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <EditText
+                android:id="@+id/analysis_habit_et_2_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_6"
+                android:hint="@string/analysis_habit_2_7_hint"
+                android:textColorHint="@color/colorMiddleGray"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/a_lignt_font"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <ImageView
+                android:id="@+id/analysis_habit_iv_3"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_7"
+                app:layout_constraintLeft_toLeftOf="@id/analysis_habit_iv_1"
+                android:src="@drawable/img_finger_three"
+                android:layout_marginTop="30dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/analysis_habit_tv_3"
+                app:layout_constraintTop_toTopOf="@id/analysis_habit_iv_3"
+                app:layout_constraintBottom_toBottomOf="@id/analysis_habit_iv_3"
+                app:layout_constraintLeft_toRightOf="@id/analysis_habit_iv_3"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/analysis_habit_3"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/analysis_habit_tv_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_iv_3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="16sp"
+                android:textColor="@color/colorDarkGray"
+                android:text="@string/analysis_habit_3_1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorWhite"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_tv_3_1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

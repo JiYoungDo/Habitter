@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.Carrie.habitter.Analysis.AnalysisActivity;
 import com.Carrie.habitter.HabitLog_calendar_fragment.Calendar_Fragment;
 import com.Carrie.habitter.HabitLog_setting_fragment.Setting_Fragment;
 import com.Carrie.habitter.HabitLog_today_detail_habit_fragment.Detail_habit_Fragment;
@@ -58,7 +59,9 @@ public class HabitLogActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 분석하기 화면으로 넘어가기.
+                Intent intent = new Intent(HabitLogActivity.this, AnalysisActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

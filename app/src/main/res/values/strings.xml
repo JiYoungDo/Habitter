@@ -24,4 +24,21 @@
     <string name="delete_habit_dialog_title">습관 빼기</string>
     <string name="delete_habit_dialog_contents">삭제 하고 싶은 습관을 \n손가락으로 길게 눌러주세요.</string>
     <string name="addnewalarm">새 알람 추가</string>
+    <string name="finger_one_detail_string">사람마다 담배를 끊는 방식과 폭식을 억누르는 방법이 모두 다르답니다. 게다가 한 사람에게 존재하는 습관들은 서로 다른 열망으로 부터 비롯되곤 한답니다. 이런 이유들로, 개선하고 싶은 습관에 단 하나의 처방만 내리는 것은 무의미 합니다. \n아래 버튼을 누르면 7일 동안 당신의 습관을 진단하고 구체적으로 전술을 낼 수 있습니다. \n습관 분석하기, 시작 하시겠어요?</string>
+    <string name="finger_one_btn_string">습관 분석 하러 가기</string>
+    <string name="finger_two_detail_string">모든 것은 나를 아는 것부터 시작한다 라는 말이 있습니다. 타고난 우리의 성향은 세상에 대한 우리의 관점을 결정하며 습관에도 막대한 영향을 미친답니다. /n 이 검사로는 4가지 유형이 나옵니다. 준수형/의문형/강제형/저항형이 해당됩니다.n 자신의 성향을 분석하고 그에 맞는 계획을 세우세요!</string>
+    <string name="finger_two_btn_string">내 성향 분석 하러 가기</string>
+    <string name="analysis_habit_1">반복하는 행동이 무엇인가요?</string>
+    <string name="analysis_habit_1_hint">ex: 편의점 가기, 담배 피기, 폭식 하기, 과자 사먹기</string>
+    <string name="analysis_habit_2">보상 7가지를 입력해 주세요</string>
+    <string name="analysis_habit_2_1">예를 들어 반복하는 행동이 편의점에 가는 것이라면, 보상 예시로는 공원 산책가기/차 한잔 마시기/유튜브 들어가기/친구한테 전화하기 등이 있을 수 있습니다.</string>
+    <string name="analysis_habit_2_1_hint">보상행동 1</string>
+    <string name="analysis_habit_2_2_hint">보상행동 2</string>
+    <string name="analysis_habit_2_3_hint">보상행동 3</string>
+    <string name="analysis_habit_2_4_hint">보상행동 4</string>
+    <string name="analysis_habit_2_5_hint">보상행동 5</string>
+    <string name="analysis_habit_2_6_hint">보상행동 6</string>
+    <string name="analysis_habit_2_7_hint">보상행동 7</string>
+    <string name="analysis_habit_3">7일동안 이것을 꼭 기억해주세요!</string>
+    <string name="analysis_habit_3_1">"7일동안 당신은 해비터 앱과 함께 습관을 진단하게 됩니다. 반복하는 행동은 자신도 모르는 열망으로 부터 기인하고, 보상은 열망을 채워주는 구조를 이루고 있습니다. 7일동안 해비터 앱과 함께 자신을 관찰하는 연구박사라고 생각해보세요! 그 이후의 인생은 확실히 달라질 겁니다! "</string>
 </resources>
