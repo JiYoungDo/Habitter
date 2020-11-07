@@ -16,6 +16,8 @@ public class Analysis_character_Activity extends AppCompatActivity {
     ImageView back_btn;
     TextView submit_btn;
 
+    boolean All_check;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
