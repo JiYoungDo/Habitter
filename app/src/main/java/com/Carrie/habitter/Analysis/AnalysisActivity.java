@@ -49,6 +49,9 @@ public class AnalysisActivity extends AppCompatActivity {
         btn_character_analysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // 만약 sharedpreferences로 봤을 때, 검사 결과가 있으면 검사 표로 -> 다시하기 있고,
+                // 검사 결과 없을 시에는 -> 분석하기로.
                 Intent intent = new Intent(AnalysisActivity.this, Analysis_character_Activity.class);
                 startActivity(intent);
                 finish();

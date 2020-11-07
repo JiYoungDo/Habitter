@@ -1080,6 +1080,13 @@
 
             </info.hoang8f.android.segmented.SegmentedGroup>
 
+            <View
+                app:layout_constraintTop_toBottomOf="@id/segmented22"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="120dp"
+                android:background="@color/colorWhite"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

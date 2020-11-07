@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Analysis_character.Analysis_character_Activity"></activity>
+        <activity android:name=".Analysis_character_Result.Analysis_character_result_Activity"></activity>
+        <activity android:name=".Analysis_character.Analysis_character_Activity" />
         <activity android:name=".Analysis_habit.Analysis_habit_Activity" />
         <activity android:name=".Analysis.AnalysisActivity" />
         <activity android:name=".HabitLog.HabitLogActivity" />

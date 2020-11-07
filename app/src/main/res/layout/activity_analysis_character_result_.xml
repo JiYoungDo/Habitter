@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".Analysis_character_Result.Analysis_character_result_Activity">
+
+    <ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/character_result_iv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="50dp"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/joonsoo"/>
+
+            <TextView
+                android:id="@+id/character_result_tv_title"
+                app:layout_constraintTop_toBottomOf="@id/character_result_iv"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="@id/character_result_iv"
+                app:layout_constraintRight_toRightOf="@id/character_result_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신은 \n\n강제형 인간!"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkGray"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/character_result_tv_detail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="강제형 인간은 외적 기대는 쉽게 받아들이지만, 내적 기대는 충족시키기 어려워하는 티입입니다."
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                app:layout_constraintTop_toBottomOf="@id/character_result_tv_title"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/character_result_tv_detail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="강제형 인간은 외적 기대는 쉽게 받아들이지만, 내적 기대는 충족시키기 어려워하는 티입입니다.강제형 인간은 외적 기대는 쉽게 받아들이지만, 내적 기대는 충족시키기 어려워하는 티입입니다.강제형 인간은 외적 기대는 쉽게 받아들이지만, 내적 기대는 충족시키기 어려워하는 티입입니다.강제형 인간은 외적 기대는 쉽게 받아들이지만, 내적 기대는 충족시키기 어려워하는 티입입니다.강제형 인간은 외적 기대는 쉽게 받아들이지만, 내적 기대는 충족시키기 어려워하는 티입입니다."
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                app:layout_constraintTop_toBottomOf="@id/character_result_tv_detail1"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/character_result_btn_go_to_habit_analysis"
+                app:layout_constraintTop_toBottomOf="@id/character_result_tv_detail2"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/finger_one_btn_string"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorCoral"
+                android:textSize="24sp"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <Button
+                android:id="@+id/character_result_btn_go_to_daily"
+                app:layout_constraintTop_toBottomOf="@id/character_result_btn_go_to_habit_analysis"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/go_to_daily"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/colorAccent"
+                android:textSize="24sp"
+                android:textColor="@color/colorDarkGray"
+                android:fontFamily="@font/a_lignt_font"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/character_result_btn_go_to_daily"
+                android:background="@color/colorWhite"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
