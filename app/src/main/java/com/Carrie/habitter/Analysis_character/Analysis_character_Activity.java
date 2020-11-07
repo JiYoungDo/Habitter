@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.Carrie.habitter.Analysis.AnalysisActivity;
 import com.Carrie.habitter.R;
@@ -13,6 +14,8 @@ import com.Carrie.habitter.R;
 public class Analysis_character_Activity extends AppCompatActivity {
 
     ImageView back_btn;
+    TextView submit_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,5 +30,11 @@ public class Analysis_character_Activity extends AppCompatActivity {
                 finish();
             }
         });
+
+        submit_btn = findViewById(R.id.analysis_charcter_btn_submit);
+
+
+        // 하나라도 체크가 되어있지 않으면 제출하기 버튼 안보이게
+        // 모두 체크되면 버튼 생기고 애니메이션까지
     }
 }

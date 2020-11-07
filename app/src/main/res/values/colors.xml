@@ -11,4 +11,24 @@
     <color name="colorBlack">#000000</color>
     <color name="colorDarkGray">#323139</color>
     <color name="colorMiddleGray">#aaaaaa</color>
+
+    <color name="colorGradation1">#FEC71E</color>
+    <color name="colorGradation2">#FCCC98</color>
+    <color name="colorGradation3">#FD9D27</color>
+    <color name="colorGradation4">#FA6E33</color>
+    <color name="colorGradation5">#FCE1D9</color>
+    <color name="colorGradation6">#F54D42</color>
+    <color name="colorGradation7">#F69F86</color>
+    <color name="colorGradation8">#F54D42</color>
+    <color name="colorGradation9">#F8827A</color>
+    <color name="colorGradation10">#F54D42</color>
+    <color name="colorGradation11">#DFADD6</color>
+    <color name="colorGradation12">#CB7BBC</color>
+    <color name="colorGradation13">#A51A8A</color>
+    <color name="colorGradation14">#F4CBDD</color>
+    <color name="colorGradation15">#E789B1</color>
+    <color name="colorGradation16">#D3256F</color>
+
+
+
 </resources>
