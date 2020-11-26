@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.Carrie.habitter">
 
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,9 @@
         android:showOnLockScreen="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Analysis_character_Result.Analysis_character_result_Activity"></activity>
+        <activity android:name=".SevenDays.SevenDaysActivity"></activity>
+        <activity android:name=".Wallpaper.WallpaperActivity" />
+        <activity android:name=".Analysis_character_Result.Analysis_character_result_Activity" />
         <activity android:name=".Analysis_character.Analysis_character_Activity" />
         <activity android:name=".Analysis_habit.Analysis_habit_Activity" />
         <activity android:name=".Analysis.AnalysisActivity" />
