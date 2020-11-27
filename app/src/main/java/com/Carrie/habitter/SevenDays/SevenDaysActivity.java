@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.Carrie.habitter.R;
 
 public class SevenDaysActivity extends AppCompatActivity {
 
+    TextView D_Day;
     EditText where_answer;
     Button when_time_picker;
 
@@ -22,6 +24,7 @@ public class SevenDaysActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seven_days);
 
+        D_Day = findViewById(R.id.seven_days_tv_title);
         where_answer = findViewById(R.id.seven_days_et_question_1);
 
         when_time_picker = findViewById(R.id.seven_days_btn_question_2);
