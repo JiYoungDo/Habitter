@@ -19,6 +19,8 @@
         <activity android:name=".Analysis_habit.Analysis_habit_Activity" />
         <activity android:name=".Analysis.AnalysisActivity" />
         <activity android:name=".HabitLog.HabitLogActivity" />
+        <receiver android:name=".Wallpaper.ScreenReceiver"></receiver>
+        <service android:name=".Wallpaper.ScreenService"></service>
         <activity android:name=".HowtoUse.HowtoUseActivity" />
         <activity android:name=".Register.RegisterActivity" />
         <activity android:name=".Splash.SplashActivity">

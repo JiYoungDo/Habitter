@@ -238,6 +238,8 @@
                 android:textColor="@color/colorDarkGray"
                 android:text="@string/analysis_habit_3_1"/>
 
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
