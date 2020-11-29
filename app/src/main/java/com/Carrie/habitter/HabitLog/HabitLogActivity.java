@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -19,6 +20,7 @@ import com.Carrie.habitter.HabitLog_setting_fragment.Setting_Fragment;
 import com.Carrie.habitter.HabitLog_today_detail_habit_fragment.Detail_habit_Fragment;
 import com.Carrie.habitter.HabitLog_today_fragment.Today_Fragment;
 import com.Carrie.habitter.R;
+import com.Carrie.habitter.SevenDays.SevenDaysActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -53,15 +55,32 @@ public class HabitLogActivity extends AppCompatActivity {
         today_fragment = new Today_Fragment();
         detail_habit_fragment = new Detail_habit_Fragment();
 
+        // "분석하기 버튼"
         fab = findViewById(R.id.habit_log_activity_fab);
         fab.setBackgroundColor(Color.TRANSPARENT);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HabitLogActivity.this, AnalysisActivity.class);
-                startActivity(intent);
-                finish();
+
+                final SharedPreferences auto = getApplicationContext().getSharedPreferences("nickStr", Activity.MODE_PRIVATE);
+                String Is_On_Analysis = auto.getString("is_on_analysis","null");
+                Log.d("is_on_analysis",auto.getString("is_on_analysis","null"));
+
+                if(Is_On_Analysis.equals("null"))
+                {
+                    // 만약 분석 중 아니면 ->
+                    Intent intent = new Intent(HabitLogActivity.this, AnalysisActivity.class);
+                    startActivity(intent);
+                    finish();
+
+                }else
+                {
+                    // 만약 분석 중이면 ->
+                    Intent intent = new Intent(HabitLogActivity.this, SevenDaysActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 

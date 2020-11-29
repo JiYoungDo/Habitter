@@ -8,17 +8,29 @@
     android:layout_height="match_parent"
     tools:context=".SevenDays.SevenDaysActivity">
 
-    <TextView
-        android:id="@+id/seven_days_tv_title"
+    <ImageView
+        android:id="@+id/seven_days_btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/ic_arrow_back"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/seven_days_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/seven_days_btn_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/colorBlack"
         android:fontFamily="@font/a_lignt_font"
-        android:text="D + 1"
+        android:background="@drawable/round_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="[D + 1]"
         android:textSize="24sp"/>
 
     <ScrollView

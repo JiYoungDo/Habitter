@@ -12,15 +12,13 @@
         android:showOnLockScreen="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".SevenDays.SevenDaysActivity"></activity>
-        <activity android:name=".Wallpaper.WallpaperActivity" />
+        <activity android:name=".Analysis_habit_Result.Analysis_habit_result_Activity"></activity>
+        <activity android:name=".SevenDays.SevenDaysActivity" />
         <activity android:name=".Analysis_character_Result.Analysis_character_result_Activity" />
         <activity android:name=".Analysis_character.Analysis_character_Activity" />
         <activity android:name=".Analysis_habit.Analysis_habit_Activity" />
         <activity android:name=".Analysis.AnalysisActivity" />
         <activity android:name=".HabitLog.HabitLogActivity" />
-        <receiver android:name=".Wallpaper.ScreenReceiver"></receiver>
-        <service android:name=".Wallpaper.ScreenService"></service>
         <activity android:name=".HowtoUse.HowtoUseActivity" />
         <activity android:name=".Register.RegisterActivity" />
         <activity android:name=".Splash.SplashActivity">

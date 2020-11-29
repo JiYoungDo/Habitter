@@ -54,12 +54,14 @@
             <EditText
                 android:id="@+id/analysis_habit_et_1"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/a_lignt_font"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/analysis_habit_iv_1"
                 android:hint="@string/analysis_habit_1_hint"
                 android:textColorHint="@color/colorMiddleGray"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
+                android:textColor="@color/colorBlack"
                 android:focusable="true"
                 android:paddingLeft="15dp"
                 android:layout_marginRight="20dp"/>
@@ -108,6 +110,7 @@
                 app:layout_constraintTop_toBottomOf="@id/analysis_habit_tv_2_1"
                 android:hint="@string/analysis_habit_2_1_hint"
                 android:textColorHint="@color/colorMiddleGray"
+                android:textColor="@color/colorBlack"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:focusable="true"
@@ -125,6 +128,8 @@
                 android:textColorHint="@color/colorMiddleGray"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
+                android:textColor="@color/colorBlack"
+
                 android:focusable="true"
                 android:fontFamily="@font/a_lignt_font"
                 android:paddingLeft="20dp"
@@ -141,6 +146,8 @@
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:focusable="true"
+                android:textColor="@color/colorBlack"
+
                 android:fontFamily="@font/a_lignt_font"
                 android:paddingLeft="20dp"
                 android:layout_marginRight="20dp"/>
@@ -155,6 +162,8 @@
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:focusable="true"
+                android:textColor="@color/colorBlack"
+
                 android:fontFamily="@font/a_lignt_font"
                 android:paddingLeft="20dp"
                 android:layout_marginRight="20dp"/>
@@ -170,6 +179,8 @@
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:focusable="true"
+                android:textColor="@color/colorBlack"
+
                 android:fontFamily="@font/a_lignt_font"
                 android:paddingLeft="20dp"
                 android:layout_marginRight="20dp"/>
@@ -181,6 +192,8 @@
                 app:layout_constraintTop_toBottomOf="@id/analysis_habit_et_2_5"
                 android:hint="@string/analysis_habit_2_6_hint"
                 android:textColorHint="@color/colorMiddleGray"
+                android:textColor="@color/colorBlack"
+
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:focusable="true"
@@ -198,6 +211,8 @@
                 android:layout_marginLeft="20dp"
                 android:focusable="true"
                 android:fontFamily="@font/a_lignt_font"
+                android:textColor="@color/colorBlack"
+
                 android:paddingLeft="20dp"
                 android:layout_marginRight="20dp"/>
 
@@ -238,13 +253,24 @@
                 android:textColor="@color/colorDarkGray"
                 android:text="@string/analysis_habit_3_1"/>
 
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/analysis_habit_btn_start_analysis"
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_tv_3_1"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="50dp"
+                android:text="@string/analysis_start"
+                android:fontFamily="@font/a_lignt_font"
+                android:textSize="26sp"
+                android:background="@drawable/b_green_round_background"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@color/colorWhite"
-                app:layout_constraintTop_toBottomOf="@id/analysis_habit_tv_3_1"/>
+                app:layout_constraintTop_toBottomOf="@id/analysis_habit_btn_start_analysis"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

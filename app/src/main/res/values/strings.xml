@@ -89,4 +89,7 @@
     <string name="not_alone">다른 사람 있었음</string>
     <string name="seven_days_Q_other_act">5. 신호가 오기 직전의 행동은 무엇인가요?</string>
     <string name="seven_days_Q_other_act_hint">ex: 식사 마침, 친구와 전화, 자고 일어남, 등</string>
+    <string name="analysis_start">7일 분석 시작</string>
+    <string name="you_are_on_analysis">당신은 분석 중! 입니다.\n\n반복 행동의 신호가 오셨나요?\n\n아래의 버튼을 누르고 습관 기록을 합시다!</string>
+    <string name="go_to_seven_days">반복 행동 신호 기록하기</string>
 </resources>
